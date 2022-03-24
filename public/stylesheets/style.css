@@ -1,0 +1,128 @@
+* {
+    box-sizing: border-box;
+    -webkit-font-smoothing: antialiased;
+}
+
+body {
+    background-color: #F0F2F5;
+    font-family: "Poppins", sans-serif;
+}
+
+.container {
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.student-card {
+    background-color: #FFFFFF;
+    padding: 20px 30px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+.student-create {
+    display: block;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    text-decoration: none;
+    background-color: #33CC95;
+    color: #FFF;
+    padding: 20px 30px;
+    font-weight: bold;
+    text-align: center;
+    transition: filter 0.3s;
+}
+
+.student-create:hover {
+    filter: opacity(0.7);
+}
+
+.back-button {
+    text-decoration: none;
+    color: #E52E4D;
+    font-weight: bold;
+    font-size: 14px;
+    transition: filter 0.3s;
+}
+
+.back-button:hover {
+    filter: opacity(0.7);
+}
+
+.form-container {
+    background-color: #fff;
+    padding: 20px 30px;
+    border-radius: 5px;
+    margin-top: 20px;
+}
+
+.student-edit-heading {
+    font-size: 20px;
+    color: #322153;
+}
+
+.input-block {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10px;
+}
+
+.input-block .input-label {
+    font-size: 14px;
+    margin-bottom: 5px;
+    color: #6C6C80;
+}
+
+.input {
+    background-color: #F0F0F5;
+    border-radius: 5px;
+    border: solid 1px #F0F0F5;
+    padding: 8px;
+    color: #322153;
+}
+
+.form-container button {
+    background-color: #33CC95;
+    color: #FFFFFF;
+    font-weight: bold;
+    border: none;
+    padding: 8px 20px;
+    border-radius: 5px;
+    margin-left: auto;
+    cursor: pointer;
+    transition: filter .3s;
+}
+
+.form-container button:hover {
+    filter: opacity(0.7);
+}
+
+.actions {
+    display: flex;
+    justify-content: space-between;
+}
+
+.actions a,
+.actions button {
+    text-decoration: none;
+    transition: filter .3s;
+}
+
+.actions a:hover,
+.actions button:hover {
+    filter: opacity(0.7);
+}
+
+.student-edit {
+    color: goldenrod;
+}
+
+.student-delete {
+    border: none;
+    background-color: transparent;
+    color: red;
+    font-size: 16px;
+    cursor: pointer;
+    color: #E52E4D;
+}
