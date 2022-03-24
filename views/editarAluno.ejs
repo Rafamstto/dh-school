@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Editar Aluno</title>
+</head>
+<body>
+  <form action="/alunos/<%= aluno.id %>/edit?_method=PUT" method="POST">
+    <div>
+      <label for="nome">Nome</label>
+      <input id="nome" name="nome" placeholder="Digite seu nome" type="text" value="<%= aluno.nome %>">
+    </div>
+
+    <div>
+      <label for="sobrenome">Sobrenome</label>
+      <input id="sobrenome" name="sobrenome" placeholder="Digite seu sobrenome" type="text" value="<%= aluno.sobrenome %>">
+    </div>
+
+    <div>
+      <label for="ano_matricula">Ano de matrícula</label>
+      <input id="ano_matricula" name="ano_matricula" placeholder="Digite seu ano de matrícula" type="number" value="<%= aluno.ano_matricula %>">
+    </div>
+
+    <button type="submit">Enviar</button>
+  </form>
+</body>
+</html>

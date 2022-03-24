@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Escola</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Roboto&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha512-SfTiTlX6kk+qitfevl/7LibUOeJWlt9rbyDn92a1DqWOw9vWG2MFoays0sgObmWazO5BQPiFucnnEAjpAB+/Sw==" crossorigin="anonymous" referrerpolicy="no-referrer"
+    />
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+</head>
+
+<body>
+    <div class="container">
+        <a class="student-create" href="/alunos/create">
+            <i class="fa fa-plus-circle" aria-hidden="true"></i> Adicionar novo aluno
+        </a>
+        <div class="student-list">
+
+            <% alunos.forEach(aluno => { %>
+                <div class="student-card">
+                    <p>
+                        <%= aluno.nome %>
+                            <%= aluno.sobrenome %>
+                    </p>
+                    <p><strong>Ano de matrícula: </strong>
+                        <%= aluno.ano_matricula %>
+                    </p>
+                    <div class="actions">
+                        <a href="/alunos/<%= aluno.id %>/edit" class="student-edit">
+                            <i class="fa fa-pencil" aria-hidden="true"></i> Editar
+                        </a>
+                        <form action="/alunos/<%= aluno.id %>/delete?_method=DELETE" method="POST">
+                            <button class="student-delete">
+                  <i class="fa fa-trash" aria-hidden="true"></i>
+                  Deletar
+                </button>
+                        </form>
+                        <!-- <a href="" class="student-delete">
+                <i class="fa fa-trash" aria-hidden="true"></i>
+                Deletar
+              </a> -->
+                    </div>
+                </div>
+                <% }) %>
+        </div>
+    </div>
+</body>
+
+</html>
